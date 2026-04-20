@@ -19,6 +19,7 @@ export default defineConfig({
       entry: [
           resolve(__dirname, 'src/server.ts'),
           resolve(__dirname, 'src/useGameUPC.ts'),
+          resolve(__dirname, 'src/types.ts'),
       ],
       formats: ['es'],
       fileName: (_format, name) => `${name}.js`

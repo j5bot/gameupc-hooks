@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "gameupc-hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React hooks for GameUPC API integration",
   "module": "dist/useGameUPC.js",
   "exports": {
@@ -12,6 +12,10 @@
     "./useGameUPC": {
       "types": "./dist/useGameUPC.d.ts",
       "import": "./dist/useGameUPC.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
     }
   },
   "typesVersions": {
@@ -21,6 +25,9 @@
       ],
       "useGameUPC": [
         "dist/useGameUPC.d.ts"
+      ],
+      "types": [
+        "dist/types.d.ts"
       ]
     }
   },

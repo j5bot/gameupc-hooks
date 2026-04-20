@@ -32,7 +32,6 @@ pnpm test:watch
 
 The test suite includes:
 
-- Public API export checks (`tests/index.test.ts`)
 - Host URL helper behavior (`tests/constants.test.ts`)
 - Server request contract behavior (`tests/server.test.ts`)
 - React hook behavior with mocked server APIs (`tests/useGameUPC.test.ts`)

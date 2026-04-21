@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "gameupc-hooks",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "React hooks for GameUPC API integration",
   "module": "dist/useGameUPC.js",
   "exports": {

@@ -1,27 +1,11 @@
-export type GameUPCStatus = 'verified' | 'none' | 'choose_from_versions' | 'choose_from_bgg_info_or_search' | 'choose_from_versions_or_search';
-export const GameUPCStatus: Record<GameUPCStatus, GameUPCStatus> = {
-    verified: 'verified',
-    none: 'none',
-    choose_from_versions: 'choose_from_versions',
-    choose_from_bgg_info_or_search: 'choose_from_bgg_info_or_search',
-    choose_from_versions_or_search: 'choose_from_versions_or_search',
-};
-
-export const GameUPCVersionStatusText: Record<GameUPCStatus, string> = {
-    verified: 'Verified',
-    none: 'Not found',
-    choose_from_versions: 'Choose from the available versions',
-    choose_from_bgg_info_or_search: 'Choose a game, or search for something not in the list',
-    choose_from_versions_or_search: `Choose from the available versions, or search for something
- not in the list`
-};
+export type GameUPCStatuses = 'verified' | 'none' | 'choose_from_versions' | 'choose_from_bgg_info_or_search' | 'choose_from_versions_or_search';
 
 export type GameUPCData = {
     status: 'ok' | 'error';
     upc: string;
     name: string;
     searched_for: string;
-    bgg_info_status: GameUPCStatus;
+    bgg_info_status: GameUPCStatuses;
     bgg_info: GameUPCBggInfo[];
 };
 
@@ -34,7 +18,7 @@ export type GameUPCBggInfo = {
     image_url: string;
     data_url: string;
     update_url: string;
-    version_status: GameUPCStatus;
+    version_status: GameUPCStatuses;
     versions: GameUPCBggVersion[];
 };
 

@@ -68,7 +68,6 @@ export const useGameUPC = (options?: UseGameUPCOptions) => {
             return gameDataMap[upc];
         }
         if (fetchingGameUPCs.current.includes(upc)) {
-            console.info('[getGameData] is fetching: ', fetchingGameUPCs.current, upc);
             return undefined;
         }
 
@@ -77,7 +76,6 @@ export const useGameUPC = (options?: UseGameUPCOptions) => {
         startGetTransition(async () => {
             const gameData = fetchGameDataForUpc(upc, search)
                 .then(data => {
-                    console.info('[getGameData] data: ', data);
                     gameUPCs.push(upc);
                     setGameUPCs(gameUPCs);
                     gameDataMap[upc] = data;
@@ -87,7 +85,6 @@ export const useGameUPC = (options?: UseGameUPCOptions) => {
 
             await gameData;
             fetchingGameUPCs.current = fetchingGameUPCs.current.filter(gameUPC => gameUPC !== upc);
-            console.info('[getGameData]', gameUPCs, fetchingGameUPCs);
         });
 
         const now = new Date().valueOf();

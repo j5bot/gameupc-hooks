@@ -17,9 +17,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: [
-          resolve(__dirname, 'src/server.ts'),
-          resolve(__dirname, 'src/useGameUPC.ts'),
-          resolve(__dirname, 'src/types.ts'),
+          resolve(import.meta.dirname, 'src/server.ts'),
+          resolve(import.meta.dirname, 'src/useGameUPC.ts'),
+          resolve(import.meta.dirname, 'src/types.ts'),
       ],
       formats: ['es'],
       fileName: (_format, name) => `${name}.js`
